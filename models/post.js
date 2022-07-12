@@ -17,14 +17,9 @@ Post.init(
         type: DataTypes.STRING,
         allowNull: false
       },
-      postComment: {
+      postContent: {
         type: DataTypes.STRING,
         allowNull: false
-      },
-      dateCreated: {
-        type: DataTypes.dateCreated,
-        allowNull: false,
-        defaultValue: DataTyes.NOW,
       }, 
       userId: {
           type: DataTypes.INTEGER,
@@ -45,3 +40,13 @@ Post.init(
 );
 
 module.exports = Post;
+
+
+// comments: [{ //array because it can hold multiple
+//   type: DataTypes.INTEGER,
+//   references: {
+//       model: 'comment',
+//       keys: 'id',
+//   },
+//   allowNull: true,
+// }],

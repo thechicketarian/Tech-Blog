@@ -7,7 +7,7 @@ class Comment extends Model {}
 Comment.init(
   {
     // define columns
-    id: {
+    id: { // created a relationship in post.js to link comments
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
@@ -17,11 +17,6 @@ Comment.init(
         type: DataTypes.STRING,
         allowNull: false
       },
-      dateCreated: {
-        type: DataTypes.dateCreated,
-        allowNull: false,
-        defaultValue: DataTyes.NOW,
-      }, 
       userId: {
           type: DataTypes.INTEGER,
           references: {
