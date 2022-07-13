@@ -1,4 +1,19 @@
 {
+  "name": "techblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "seed": "node seeds/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ls"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.4",
@@ -10,6 +25,6 @@
     "hbs": "^4.2.0",
     "mysql2": "^2.3.3",
     "path": "^0.12.7",
-    "sequelize": "^6.21.0"
+    "sequelize": "^6.21.3"
   }
 }

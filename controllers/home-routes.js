@@ -13,7 +13,7 @@ router.get('/', withAuth, async (req,res) => {
         //serializing the dats
         const posts = postData.map((post) => post.get({ plain: true }));
         //rendering on the page
-        res.render('homepage', {posts, loggedIn: res.session.loggedIn});
+        res.render('homepage', {posts,loggedIn: res.session.loggedIn});
     } catch(err) {
         res.status().json(err);
     }
