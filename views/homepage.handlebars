@@ -1,0 +1,29 @@
+<h1> Tech Blog </h1>
+<div class="container"> Thank you for visiting, we are a website that showcases bootcamp graduates.<br>  Now showcasing 2022 UT Austin Bootcamp Cohort  <span role="img" aria-label="hand">🤘🏽</span> 
+</div>
+<div class="homepagePerksTitle"> 
+<h2> Posts </h2>
+</div>
+
+
+<!-- Loop over each user object -->
+{{#if posts.length}} 
+<div class="profileCard"> 
+{{!-- <h2 > Job Openings </h2> --}}
+<p> see all we have been up to</p>
+</div>
+<br>
+<div class="homepagePosts"> 
+{{#each posts as |post| }}
+<div class="allPostsInd">
+    <!-- Render user-specific data with Handlebars.js expressions -->
+    <p > </p> <h3 class="postTitle" > {{post.postTitle}} </h3></span></p>
+        {{!-- <hr> --}}
+    <p class="postDescription"><br>{{post.postContent}}  </p>
+    <hr style="width: 5%;">
+    <p class="postDescription"> Posted By:{{post.user.email}} </p>
+</div> 
+{{/each}} 
+{{/if}}
+<div class="oneOfOne"> <span> 💜 </span></div>
+</div>

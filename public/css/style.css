@@ -1,0 +1,253 @@
+  /* LAYOUT */
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #fbfaff;
+    font-family: 'Source Code Pro', monospace;
+
+  }
+
+  h1, h2, h3 , h4, h5 , h6 {
+    text-transform: uppercase;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 900;
+    line-height: 1.4em;
+    letter-spacing: .05em;
+  }
+
+  hr {
+    margin-top: 8px;
+    margin-bottom:8px;
+    border: black .5px solid;
+  }
+
+  main {
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .container {
+    /* display: flex;
+    flex-flow: column wrap;
+    align-content: flex-start; */
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+
+  /* navigation */
+
+  nav {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-items: center;
+    /* border-bottom: black 2px solid; */
+}
+  
+.navItem {
+  text-decoration: none;
+  color: black;
+
+}
+.navItem:hover {
+    text-decoration: 3px #d4bbfc wavy underline;
+}
+
+.menuItemsNav {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+
+.menuItemsNav li {
+  padding: 13px;
+}
+
+button {
+  padding: 10px;
+  background-color: transparent;
+  border: black 2px solid;
+}
+
+.button {
+  padding: 10px;
+  color: black;
+  text-decoration: wavy;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-decoration: black wavy underline;
+}
+
+
+/* homepage  */
+
+.homepagePerksTitle {
+  margin-top: 20px;
+}
+.homepagePerksContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+
+
+/* login form  */
+
+.authForm {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.forms {
+  border: black 2px solid;
+  padding: 20px;
+  text-align: left;
+}
+
+form button {
+  width: 100%;
+  /* height: 30px; */
+  margin-top: 5px;
+  margin-bottom: 5px;
+ 
+}
+button:hover {
+    text-decoration: 3px #d4bbfc wavy underline;
+}
+
+/* form styling basic  */
+.form-group {
+ padding: 5px;
+ border-bottom: 2px solid black;
+}
+
+.form-input {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  background-color: transparent;
+  text-align: center;
+}
+
+.mainFormHeader {
+  padding-bottom: 5px;
+}
+
+/* handlebars  */
+.hbsInputsNames{
+  font-weight: 400;
+  color: purple;
+}
+
+
+/* homepage post */
+
+.profileCard {
+    border-bottom: 6px dotted #f2ebfb;
+    padding-bottom: 20px;
+    width: 70%;;
+    margin: auto;
+    /* margin-bottom: 20px; */
+  }
+
+  .oneOfOne {
+    border-top: 6px dotted #f2ebfb;
+    padding-top: 10px;
+    width: 70%;;
+    margin: auto;
+    /* margin-bottom: 20px; */
+  }
+  .oneOfOne span {
+    opacity: 0.3;
+  }
+.homepagePosts {
+    display: flex;
+    justify-content: space-evenly;
+    width: 80%;
+    margin: 0 auto;
+    flex-direction: column;
+
+}
+
+.allPostsInd {
+  border-left: 6px dotted #f2ebfb;
+  border-top: 6px dotted #d4bbfc;
+  border-right: 6px dotted #f2ebfb;
+  border-bottom: 6px dotted #ebd9fc;
+  padding: 40px;
+  margin-bottom: 20px;
+}
+
+.allJobsForm p {
+padding-bottom: 10px;
+}
+
+.postTitle{
+    text-align: left!important;
+    text-transform: uppercase;
+    text-decoration: 6px dotted underline #e4e3e7;
+}   
+
+.postDescription{
+    padding-bottom: 30px;
+    text-align: left!important;
+}
+
+/* footer */
+
+footer {
+  text-align: center;
+  padding-bottom: 20px;
+
+}
+footer a {
+  text-decoration: none;
+  color: black;
+}
+footer a:hover {
+    text-decoration: 3px #d4bbfc wavy underline;
+}
+
+@media screen and (max-width: 768px) {
+  nav{
+     flex-direction: column;
+     align-items: center;
+     height: max-content;
+     width: 100%;
+     justify-content:space-around;
+
+  }
+  .homepagePerksContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+}
+.authForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.login-form{
+  padding-bottom: 10px;
+}
+}

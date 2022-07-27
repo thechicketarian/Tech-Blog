@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Bootcamp Graduates </title>
+  
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,400;0,600;0,900;1,400;1,500&display=swap" rel="stylesheet">
+
+  {{!-- <link rel="stylesheet" href="/css/jass.css"> --}}
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+
+      <nav>
+        <!-- Conditionally render login or logout links -->
+        <h1 class="logo">
+        <span role="img" aria-label="computer-girl">👩🏽‍💻</span>
+        <a class="navItem" href="/">Tech Blog</a>
+        <span role="img" aria-label="graduate">👩🏽‍🎓</span>
+      </h1>
+      <ul class="menuItemsNav"> 
+        {{#if logged_in}}
+        <li> <a class="navItem" href="/profile">profile</a> </li>
+        <li> </li> <button class="no-button" id="logout">logout</button> <li>
+        {{else}}
+         <li>  <a class="navItem" href="/login"> Login </a> </li> | 
+          <li>  <a class="navItem" href="/signup"> SignUp </a> </li>
+         
+        {{/if}}
+        </ul>
+      </nav>
+
+    <main>
+      <!-- Render the sub layout -->
+      {{{ body }}}
+    </main>
+    <footer>
+      
+    </footer>
+
+
+  <!-- Render script for logged in users only -->
+  {{#if logged_in}}
+  <script src="/js/logout.js"></script>
+  {{/if}}
+</body>
+<footer><p>Created by <span role="img" aria-label="pointing hand"> 👉🏽 </span> Bexi </a></p>
+  <a href="https://github.com/thechicketarian" alt="github link" target="_blank"> Tech Blog </a>
+</html>

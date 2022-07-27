@@ -4,7 +4,7 @@ const { Post, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 //find all posts
-router.get('/', withAuth, async (req,res) => {
+router.get('/', async (req,res) => {
 
     try {
         const postData = await Post.findAll({
@@ -13,7 +13,7 @@ router.get('/', withAuth, async (req,res) => {
         //serializing the dats
         const posts = postData.map((post) => post.get({ plain: true }));
         //rendering on the page
-        res.render('homepage', {posts,loggedIn: res.session.loggedIn});
+        res.render('homepage', {posts});
     } catch(err) {
         res.status().json(err);
     }
@@ -43,7 +43,7 @@ router.get('/post/:id', withAuth, async (req,res) => {
 //sign-up
 router.get('/signup', (req, res) => {
     if (req.session.loggedIn) {
-      res.redirect('/');
+      res.redirect('/profile');
       return;
     }
   
@@ -52,12 +52,14 @@ router.get('/signup', (req, res) => {
 //login
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
-      res.redirect('/');
+      res.redirect('/profile');
       return;
     }
   
     res.render('login');
   });
+
+  
 
 //logout
 // router.get('/logout', (req, res) => {
